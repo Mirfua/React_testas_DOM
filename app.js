@@ -25,8 +25,22 @@ document.querySelector('h2 > span:first-of-type').style.color = 'grey';
 console.log('Kiek yra h2 tagu: ', document.querySelectorAll('h2').length); 
     
 //b. Suskaičiuoti kiek yra h2 tagų, kurie neturi klasės first 
+console.log('Kiek h2 be first klases: ', document.querySelectorAll('h2').length - document.querySelectorAll('h2.first').length);
+
 //c. Visus h2 tagus nuspalvinti šviesiai mėlynai  
+let h2Tagai = document.querySelectorAll('h2')
+
+h2Tagai.forEach((e) => {
+    e.style.color = "lightblue"
+});
+
 //d. Tagų, kurie yra div su klase prices, viduje esantiems h2 tagams pridėti klasę price-tag;
+let h2Price = document.querySelectorAll('div.price > h2')
+
+h2Price.forEach((e) => {
+    e.classList.add("price-tag")
+});
+
 //e. Pabraukti visus tagus su klase new;
 //f. Suskaičiuoti kiek yra gyvūnų kategorijų ir žirafų (jos yra ul tagai);
 // g.Tagus ul apibraukite rėmeliais ir uždėkite 15px paddingą viršuje ir apačioje ir 50px paddingą kairėje ir dešinėje;
