@@ -61,7 +61,7 @@ console.log("Visos gyvunu kategorijos: ", document.querySelectorAll("ul").length
 
 const zirafos = [];
 
-document.querySelectorAll("li").forEach((e) => {
+document.querySelectorAll("ul").forEach((e) => {
   if (e.textContent.search("Žirafa") >= 0) zirafos.push(e.textContent);
 });
 console.log("Is viso zirafu yra: ", zirafos.length);
@@ -72,12 +72,9 @@ console.log(zirafos);
 
 let ulStyle = document.querySelectorAll('ul');
 
-ulStyle.forEach(function (x) {
+ulStyle.forEach((e) => {
     x.style.border = '1px solid red'
-})
-
-ulStyle.forEach(function (x) {
-    x.style.padding = '15px 50px';
+    x.style.padding = '15px 50px'
 })
 console.log(ulStyle);
 
@@ -88,8 +85,24 @@ console.log('Nauji gyvunai su klase ".new" yra: ', newAnimals);
 
 // i.Suskaičiuoti atskirai kiek yra naujų gyvūnų kiekvienoje kategorijoje;
 
+let atskiraiGyvunai = document.querySelectorAll('.animals .new').length;
 
+console.log('kiek yra naujų gyvūnų kiekvienoje kategorijoje: ', atskiraiGyvunai);
 
+let zirafuNr = document.querySelectorAll('#zirafos .new').length;
+console.log('zirafu kiekis: ', zirafuNr);
+
+let plesrunuNr = document.querySelectorAll('#plesrunai .new').length;
+console.log('plesrunu kiekis: ', plesrunuNr);
+
+let gyvaciuNr = document.querySelectorAll('#gyvates .new').length;
+console.log('gyvaciu kiekis: ', gyvaciuNr);
+
+let zoliaedziuNr = document.querySelectorAll('#zoliaedziai .new').length;
+console.log('zoliaedziu kiekis: ', zoliaedziuNr);
 
 //------------------------------------------------------------------------- //
+// 3. Elementų events
 //------------------------------------------------------------------------- //
+
+//     a. Padaryti tai ką liepia mygtukai Header1 sekcijoje;
